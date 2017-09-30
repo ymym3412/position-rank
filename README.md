@@ -134,7 +134,7 @@ This is sample customize tokenizer.
 ```py
 class CustomizeTokenizer(object):
 
-    def __init__(self, mecab_args="mecabrc"):
+    def __init__(self):
         # Initialize your tokenizer.
 
     def tokenize(self, sentence):
