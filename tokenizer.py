@@ -40,7 +40,6 @@ class StanfordCoreNlpTokenizer(object):
           Phrase list: Specific continuous tokens.
 
         """
-        # (adj)*(noun)+で長さが3以上のフレーズも返す
         tokens = self.tokenizer.pos_tag(sentence)
         pos_tags = [self._anonymize_pos(token[1]) for token in tokens]
         pattern = r"J*N+"
