@@ -137,8 +137,9 @@ class CustomizeTokenizer(object):
     def __init__(self, mecab_args="mecabrc"):
         # Initialize your tokenizer.
 
-    def tokenize(self, sentence, pos_filter=["名詞", "形容詞"]):
+    def tokenize(self, sentence):
         # tokenize sentence and create phrase list, then return them.
+        # Tokens must be filterd only adjective and noun POS in your language.
         return token_list, phrase_list
 
 title = "{other language's title}"
