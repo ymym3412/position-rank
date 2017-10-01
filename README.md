@@ -98,7 +98,7 @@ position_rank(title + abstract, tokenizer, alpha=0.6, window_size=4, num_keyphra
 ### Simple example
 ```py
 from position_rank import position_rank
-from tokenizer import StanfordCoreNlpTokenizer
+from tokenizer import MecabTokenizer
 
 title = "{日本語論文のタイトル}"
 abstract = "{日本語論文の概要}"
@@ -111,7 +111,7 @@ position_rank(title + abstract, tokenizer, lang="ja")
 Use dictionary for Mecab. Add Mecab's option string to MecabTokenizer.  
 ```py
 from position_rank import position_rank
-from tokenizer import StanfordCoreNlpTokenizer
+from tokenizer import MecabTokenizer
 
 title = "{日本語論文のタイトル}"
 abstract = "{日本語論文の概要}"
