@@ -31,7 +31,7 @@ You can use this method not only English scholarly documents, but also any other
 
 >>>tokenizer = StanfordCoreNlpTokenizer("http://localhost")
 >>>position_rank(title + abstract, tokenizer)
-['PositionRank', 'online_scholarly_data', 'fast_information_processing', 'account_word_positions', 'Keyphrase', 'Extraction', 'Approach', 'Unsupervised', 'document', 'Scholarly']
+['Keyphrase_Extraction', 'PositionRank', 'Unsupervised_Approach', 'online_scholarly_data', 'scholarly_documents', 'Scholarly_Documents', 'PageRank_models', 'fast_information_processing', 'unsupervised_model', 'account_word_positions']
 ```
 
 ## SETUP
@@ -129,7 +129,7 @@ position_rank(title + abstract, tokenizer, alpha=0.6, window_size=4, num_keyphra
 ## CUSTOMIZE
 You can use PositionRank for other language if you create your tokenizer.  
 Customize tokenizer must have `tokenize()` method. `tokenize()` returns two list, `token list` and `phrase list`.  
-`Phrase` means continuous tokens which have specific POS(Part-of-Speech) pattern `(adjective)*(noun)+` and length are more than 3.  
+`Phrase` means continuous tokens which have specific POS(Part-of-Speech) pattern `(adjective)*(noun)+` and length are up to 3.  
 This is sample customize tokenizer.  
 ```py
 class CustomizeTokenizer(object):

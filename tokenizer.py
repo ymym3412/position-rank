@@ -44,7 +44,7 @@ class StanfordCoreNlpTokenizer(object):
         pos_tags = [self._anonymize_pos(token[1]) for token in tokens]
         pattern = r"J*N+"
         iterator = re.finditer(pattern, "".join(pos_tags))
-        phrases = filter(lambda x: len(x) >= 3, [[token[0] for token in tokens[match.start():match.end()]] for match in iterator])
+        phrases = filter(lambda x: len(x) <= 3, [[token[0] for token in tokens[match.start():match.end()]] for match in iterator])
         phrases = ["_".join(phrase) for phrase in phrases]
         return [token[0] for token in tokens if token[1] in pos_filter], phrases
 
@@ -104,7 +104,7 @@ class MecabTokenizer(object):
         pos_tags = [self._anonymize_pos(token[1]) for token in tokens]
         pattern = r"形*名+"
         iterator = re.finditer(pattern, "".join(pos_tags))
-        phrases = filter(lambda x: len(x) >= 3, [[token[0] for token in tokens[match.start():match.end()]] for match in iterator])
+        phrases = filter(lambda x: len(x) <= 3, [[token[0] for token in tokens[match.start():match.end()]] for match in iterator])
         phrases = ["_".join(phrase) for phrase in phrases]
         return [token[0] for token in tokens if token[1] in pos_filter], phrases
 
