@@ -29,7 +29,7 @@ You can use this method not only English scholarly documents, but also any other
 ... datasets of research papers, PositionRank
 ... achieves improvements as high as 29.09%."""
 
->>>tokenizer = StanfordCoreNlpTokenizer("http://localhost")
+>>>tokenizer = StanfordCoreNlpTokenizer("http://localhost", port = 9000)
 >>>position_rank(title + abstract, tokenizer)
 ['Keyphrase_Extraction', 'PositionRank', 'Unsupervised_Approach', 'online_scholarly_data', 'scholarly_documents', 'Scholarly_Documents', 'PageRank_models', 'fast_information_processing', 'unsupervised_model', 'account_word_positions']
 ```
@@ -77,7 +77,7 @@ scholarly data present both challenges and
 opportunities to enhance knowledge discovery.
 ..."""
 
-tokenizer = StanfordCoreNlpTokenizer("http://localhost")
+tokenizer = StanfordCoreNlpTokenizer("http://localhost", port = 9000)
 position_rank(title + abstract, tokenizer)
 ["keyphrase1", "keyphrase2", ..., "keyphrase10"]
 ```
@@ -120,7 +120,7 @@ tokenizer = MecabTokenizer("-d /usr/local/lib/mecab/dic/mecab-ipadic-neologd")
 position_rank(title + abstract, tokenizer, lang="ja")
 ["keyphrase1", "keyphrase2", ..., "keyphrase10"]
 ```
-Switch other algorith parameters. 
+Switch other algorith parameters.
 ```py
 position_rank(title + abstract, tokenizer, alpha=0.6, window_size=4, num_keyphrase=10, lang="ja")
 ["keyphrase1", "keyphrase2", ..., "keyphrase10"]

@@ -11,7 +11,7 @@ class StanfordCoreNlpTokenizer(object):
     Simultaneously, tokenizer returns specific pattern phrases.
 
     """
-    def __init__(self, url_or_path):
+    def __init__(self, url_or_path, port = 9000):
         """Initialize stanford core nlp tokenier.
 
         Args:
@@ -21,7 +21,7 @@ class StanfordCoreNlpTokenizer(object):
             When you provide path of librart, Stanford CoreNLP server will be up independent of python process.
 
         """
-        self.tokenizer = StanfordCoreNLP(url_or_path)
+        self.tokenizer = StanfordCoreNLP(url_or_path, port = port)
 
     def tokenize(self, sentence, pos_filter=["JJ", "JJR", "JJS", "NN", "NNS", "NNP", "NNPS"]):
         """Tokenize sentence.
