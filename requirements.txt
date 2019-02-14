@@ -1,10 +1,10 @@
-certifi==2017.7.27.1
+certifi==2018.11.29
 chardet==3.0.4
-idna==2.6
+idna==2.8
 mecab-python3==0.7
 numpy==1.13.1
 psutil==5.3.1
-requests==2.18.4
+requests==2.21.0
 stanfordcorenlp==3.7.0.2
 stemming==1.0.1
-urllib3==1.22
+urllib3==1.24.1
