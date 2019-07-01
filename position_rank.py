@@ -67,7 +67,7 @@ def position_rank(sentence, tokenizer, alpha=0.85, window_size=6, num_keyphrase=
         for co_word, freq in cnt.most_common():
             adjancency_matrix[word2idx[w]][word2idx[co_word]] = freq
 
-    adjancency_matrix = adjancency_matrix / adjancency_matrix.sum(axis=1)
+    adjancency_matrix = adjancency_matrix / adjancency_matrix.sum(axis=0)
     p_vec = p_vec / p_vec.sum()
     # principal eigenvector s
     s_vec = np.ones(n) / n
