@@ -3,7 +3,7 @@ chardet==3.0.4
 idna==2.8
 mecab-python3==0.7
 numpy==1.16.3
-psutil==5.6.2
+psutil==5.6.6
 requests==2.21.0
 stanfordcorenlp==3.9.1.1
 stemming==1.0.1
